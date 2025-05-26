@@ -1,75 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Palkee Chat</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      padding: 20px;
-    }
-    #chat-box {
-      background: white;
-      padding: 10px;
-      height: 300px;
-      overflow-y: scroll;
-      border: 1px solid #ccc;
-      margin-bottom: 10px;
-    }
-    #message {
-      width: 75%;
-      padding: 10px;
-      font-size: 16px;
-    }
-    #send {
-      padding: 10px 20px;
-      font-size: 16px;
-      background: #28a745;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    #send:hover {
-      background: #218838;
-    }
-  </style>
-</head>
-<body>
-  <h2>Palkee Chat</h2>
-  <div id="chat-box"></div>
-  <input type="text" id="message" placeholder="Type your message..." />
-  <button id="send">Send</button>
+# Palkee Chat
 
-  <script>
-    const chatBox = document.getElementById('chat-box');
-    const messageInput = document.getElementById('message');
-    const sendButton = document.getElementById('send');
+Palkee Chat is a simple, lightweight web-based chat interface built using HTML and JavaScript.
 
-    function appendMessage(text, sender = "You") {
-      const msgDiv = document.createElement('div');
-      msgDiv.textContent = sender + ": " + text;
-      chatBox.appendChild(msgDiv);
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }
+## Features
 
-    sendButton.addEventListener('click', () => {
-      const msg = messageInput.value.trim();
-      if (msg) {
-        appendMessage(msg);
-        setTimeout(() => {
-          appendMessage("Got it! (Palkee)", "Palkee");
-        }, 1000);
-        messageInput.value = "";
-      }
-    });
+- Real-time message input and display
+- Clean and responsive design
+- No backend required
+- Easy to customize
 
-    messageInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        sendButton.click();
-      }
-    });
-  </script>
-</body>
-</html>
+## How to Use
+
+1. Download or clone the repository.
+2. Open `index.html` in any modern web browser.
+3. Start chatting locally or host it online.
+
+## Live Demo
+
+https://reduan-20.github.io/PalkeeChat/
+
+(If the link does not work, make sure you have enabled GitHub Pages from the repository settings.)
+
+## Installation
+
+To host it yourself:
+
+```bash
+git clone https://github.com/REDUAN-20/PalkeeChat.git
+cd PalkeeChat
+open index.html
